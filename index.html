@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鍾賢廣 - 履歷與作品集</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            /* 科技藍 */
+            --secondary-color: #1e40af;
+            --text-main: #1f2937;
+            --text-light: #4b5563;
+            --bg-color: #ffffff;
+            --bg-gray: #f3f4f6;
+            --border-color: #e5e7eb;
+            --accent: #3b82f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            color: var(--text-main);
+            background-color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* 設定為 A4 尺寸的頁面 */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 10mm auto;
+            background: var(--bg-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* 標題區塊 */
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-left h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .header-left h2 {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .header-right a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* 斷落標題 */
+        .section-title {
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin: 16px 0 8px 0;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: var(--accent);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        /* 個人簡介 */
+        .summary {
+            font-size: 13px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        /* 技能區塊 */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .skill-badge {
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        /* 經驗清單 */
+        .experience-item {
+            margin-bottom: 12px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .exp-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .exp-date {
+            font-size: 11px;
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            background: #e0e7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .exp-bullets {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 12px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .exp-bullets li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+
+        .exp-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* ================= 第二頁：作品集 ================= */
+
+        .portfolio-item {
+            display: flex;
+            gap: 16px;
+            background: var(--bg-gray);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-color);
+            page-break-inside: avoid;
+        }
+
+        .portfolio-images {
+            flex: 0 0 140px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 90px;
+            background-color: #cbd5e1;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 11px;
+            border: 1px dashed #94a3b8;
+            overflow: hidden;
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .portfolio-content {
+            flex: 1;
+        }
+
+        .portfolio-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--primary-color);
+        }
+
+        .portfolio-desc {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .tech-stack-mini span {
+            display: inline-block;
+            font-size: 10px;
+            background: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+
+        .btn-link {
+            display: inline-block;
+            font-size: 11px;
+            color: white;
+            background-color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* 隱藏列印時不必要的元素，並確保列印排版 */
+        @media print {
+            body {
+                background-color: transparent;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* 強制分頁 */
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 第一頁：履歷 (Resume) -->
+    <div class="page">
+        <header>
+            <div class="header-left">
+                <h1>鍾賢廣</h1>
+                <h2>全端工程師 / 3D 工具開發者</h2>
+            </div>
+            <div class="header-right">
+                <p>Email: ea5878158@gmail.com</p>
+                <p><a href="https://your-portfolio-link.com" target="_blank">🔗 個人線上作品集網站</a></p>
+            </div>
+        </header>
+
+
+
+        <section>
+            <h3 class="section-title">核心技能 (Tech Stack)</h3>
+            <div class="skills-container">
+                <span class="skill-badge">C / C++</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">LISP (AI協做AutoCAD工具)</span>
+                <span class="skill-badge">3D 圖場運算 (AABB / Raycast)</span>
+                <span class="skill-badge">Undo/Redo 狀態機設計</span>
+                <span class="skill-badge">效能最佳化 (Memory Leak 處理)</span>
+                <span class="skill-badge">Unity / 物理遊戲引擎開發</span>
+                <span class="skill-badge">Excel 自動化產表 (Libxlsxwriter)</span>
+                <span class="skill-badge">硬體感測器整合 (霍爾感測、3D列印)</span>
+                <span class="skill-badge">Machine Learning (Neural Networks定位)</span>
+                <span class="skill-badge">Git / 版本控制與協作</span>
+                <span class="skill-badge">English (TOEIC 870)</span>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">學歷 (Education)</h3>
+            <div class="experience-item" style="margin-bottom: 12px;">
+                <div class="exp-header">
+                    <div class="exp-title">國立臺灣科技大學 (NTUST)</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">資訊工程系 碩士</span> (2016.09 — 2019.06)</li>
+                    <li><span class="highlight">資訊工程系 學士</span> (2012.09 — 2016.06)</li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        <section>
+            <h3 class="section-title">核心專案與工作經歷</h3>
+
+            <!-- 前公司經歷：成熟期 (2023-2026) -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">資深軟體工程師｜3D 地景建模系統 (CCS) 與計價引擎</div>
+                    <div class="exp-date">2023.01 — 2026.03</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">「互動式及時估計表」全自動化架構：</span> 捨棄舊有靜態分析，主導開發全新動態計價架構，讓 3D
+                        場景的變更（包含專項基礎結構與特殊斷面）能以秒級效率即時刷新工程報價單，並深度支援 PCCES 規範與 DXF 出圖預算連動。</li>
+                    <li><span class="highlight">單價分析結合碳排資訊與外部系統整合：</span>
+                        將即時估價表的架構向上延伸，串接水保署規範生成生命週期碳排報告，並將專案預算與碳足跡等複雜數據整合，實作出自動產製完全符合規範之 XLSX 表單模組。</li>
+                    <li><span class="highlight">前端 UI/UX 開發與底層重構：</span> 基於 Blender 環境開發多種能大幅提升設計師操作體驗的前端互動工具；並深度重構
+                        Undo/Redo
+                        狀態機與解決 Memory Leak，成功駕馭高達 7GB 的巨量模型。</li>
+                    <li><span class="highlight">產線管理與輕量化瀏覽版本開發：</span>
+                        為系統額外開發可解析原生輸出檔案的專用「瀏覽版」展示工具，不僅完善了內部產線工作坊流程，更成為設計師向外部推廣 3D 地景案件的關鍵利器。</li>
+                    <li><span class="highlight">產品調研 (UX) 與外部推廣：</span>
+                        擔任技術與第一線設計師間的溝通核心，實地探訪企業進行繪圖痛點訪談並轉譯為軟體新功能；主辦大型技術研討會與親自撰寫教材，於全國主講 15 場以上高強度實務教育訓練。</li>
+                </ul>
+            </div>
+
+            <!-- 前公司經歷：開創期 (2020-2022) -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">軟體工程師｜3D 空間配置演算法與單價分析原型</div>
+                    <div class="exp-date">2020.06 — 2022.12</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">空間幾何演算法與動態擺放：</span> 開發工程點／線產品的 3D
+                        幾何連續擺放引擎。克服等高線地形邊界、特定轉彎角度與坡率誤差，並實作抽換式特規品演算法與依據設計線動態貼合計算。</li>
+                    <li><span class="highlight">單價分析表系統建置：</span> 連結 3D 視埠空間的面積與特規產品數量，建構材料、人工、機具、雜項細部加總邏輯，並開發專案
+                        XML 格式自動匯出模組。</li>
+                    <li><span class="highlight">大宗專案實例化 (Instancing) 擴展：</span> 針對極度龐大的大宗物件量引入實例狀態緩存與延遲更新 (Deferred
+                        Update)，大幅減少因重繪模型導致的延遲，建立專案交換格式 (Olb/JSON) 的讀寫防呆防護。</li>
+                </ul>
+            </div>
+
+            <!-- 碩士論文研究 -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">磁鐵定位系統與混合實境 (VR) 繪圖應用</div>
+                    <div class="exp-date">碩士研究 | 2018.01 — 2019.09</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li>解決了傳統 VR 繪畫無實體觸覺反饋與光學定位易受遮擋的極限痛點。</li>
+                    <li><span class="highlight">硬體發明與整合：</span> 於 3D 列印模型（整顆蛋形曲面等）背面自定義霍爾效應感測器陣列與多工器接線，研發極小空間配置排線接法，結合
+                        Arduino 將即時磁場資料回傳。</li>
+
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">IGS 賽車遊戲產學合作案</div>
+                    <div class="exp-date">產學專案 | 2016.03 — 2019.01</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">賽道與街道車輛生成：</span> 開發路徑生成演算法，實作賽道幾何路線生成，並開發環境街道車輛 (Traffic) 之自動布置與循線行駛系統。
+                    </li>
+                    <li><span class="highlight">精簡化重播系統：</span> 設計並實作僅紀錄極少量核心 Frame (Event) 便能完美還原整套遊戲軌跡的「鬼車
+                        (Replay)」架構機制。</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">線上程式批改系統 (Online Judge) 二次開發</div>
+                    <div class="exp-date">產推專案 | 2017.03 — 2019.06</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">帶領與指導專題學生：</span> 指導學生擴充 HustOJ 系統專案，支援 C++ 多檔編譯與客製化 AST
+                        語法防呆；並主責蒐集與管理大量演算法測驗題庫。
+                    </li>
+                </ul>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div class="exp-title">圖學實驗室研究與專案實作</div>
+                        <div class="exp-date">大學經歷 | 2012.09 — 2016.06</div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li><span class="highlight">圖學與遊戲專案：</span> 參與實驗室深入學習 3D 底層圖學與遊戲製作知識，並完成包含 3D 列印客製化建築生成等多項專案。
+                        </li>
+                        <li><span class="highlight">出版與技術教材編撰：</span> 將開發知識轉化為教材範例，協助教授完成《Unity 3D 遊戲開發實戰》(2015)
+                            等技術專書之編撰。</li>
+                    </ul>
+                </div>
+
+        </section>
+    </div>
+
+    <!-- 強制分頁：避免兩頁內容在列印時連在一起 -->
+    <div class="page-break"></div>
+
+    <!-- 第二頁：精選靜態作品集 (Mini Portfolio) -->
+    <div class="page">
+        <header>
+            <div class="header-left">
+                <h1>專案作品選集</h1>
+                <h2>Selected Works (Mini Portfolio)</h2>
+            </div>
+        </header>
+
+        <section>
+            <!-- 作品 0：前公司地景 -->
+            <div class="portfolio-item">
+                <div class="portfolio-images">
+                    <div class="image-placeholder">[CCS軟體操作畫面 1]</div>
+                    <div class="image-placeholder">[自動化碳排預算表 2]</div>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">1. 地景 3D/CAD 建模分析與自動化算表系統</h3>
+                    <div class="tech-stack-mini">
+                        <span>3D軟體開發</span> <span>Python</span> <span>Libxlsxwriter</span> <span>AABB</span>
+                    </div>
+                    <div class="portfolio-desc">
+                        這是一套協助土木/景觀設計師從 2D CAD 線稿快速轉向 3D 實地建模與出表的專案系統。我主要負責研發場景內素材占地的碰撞判定（包含貼地形與旋轉邏輯），以及效能最吃重的 Undo/Redo
+                        機制（處理高達 7GB 模型資料的即時運轉）。<br /><br />
+                        <strong>商轉出表模組：</strong>
+                        我成功開發了能與政府「碳排係數指引」無縫接軌的自動化出表模組。系統會即時撈取使用者畫布上的立體面積/數量，考量通膨與政府規定，產出包含互動公式的合法 Excel 計價全區表。
+                    </div>
+                    <a href="https://your-portfolio-link.com/#ccs-landscape" class="btn-link">觀看研討會演講與軟體展示 ➔</a>
+                </div>
+            </div>
+
+            <!-- 作品 1 -->
+            <div class="portfolio-item">
+                <div class="portfolio-images">
+                    <!-- 若您要把真圖片放進來，只需要把以下 div 改成 <img src="您的照片名稱.jpg" class="image-placeholder" style="border:none"> -->
+                    <div class="image-placeholder">[VR曲面蛋形硬體 1]</div>
+                    <div class="image-placeholder">[類神經網路預測圖 2]</div>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">2. VR 磁力空間定位系統與混合實境畫布</h3>
+                    <div class="tech-stack-mini">
+                        <span>VR / AR</span> <span>Machine Learning</span> <span>硬體接線設計</span>
+                    </div>
+                    <div class="portfolio-desc">
+                        這是一套為了克服 VR 虛擬實境懸空繪畫手感不佳所開發的研究系統。在 3D 列印模型（如蛋形）背後極度有限的空間內安置並串聯大量霍爾效應感測器。利用 VIVE Tracker 建立機器手臂
+                        Ground Truth，收集破百萬筆訓練數據。<br /><br />
+                        <strong>挑戰與突破：</strong> 基於 Neural Network 將空間預測所需感測器數量簡化至原先 25% 以下，並利用曲率法向量公式優化雜訊，確保 3D
+                        球形表面繪畫的追蹤誤差穩定在 1mm 以內。
+                    </div>
+                    <a href="https://your-portfolio-link.com/#vr-project" class="btn-link">觀看實驗論文展示與影音資料 ➔</a>
+                </div>
+            </div>
+
+            <!-- 作品 2 -->
+            <div class="portfolio-item">
+                <div class="portfolio-images">
+                    <div class="image-placeholder">[賽車物理引擎畫面 1]</div>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">3. IGS 賽車產學專案</h3>
+                    <div class="tech-stack-mini">
+                        <span>遊戲物理引擎</span> <span>Unity / C++</span>
+                    </div>
+                    <div class="portfolio-desc">
+                        為商用街機開發核心賽道控制邏輯與逼真的車輛物理底層引擎。透過實作 Magic Formula 摩擦力模型，完美模擬賽車起步、過彎、懸吊反饋與引擎扭矩動態。<br /><br />
+                        <strong>重播系統 (Ghost Car)：</strong> 開發出一套僅紀錄極少關鍵 Event Frame，便能 100% 完美還原整場激烈賽道機車動態軌跡的重播機制架構。
+                    </div>
+                    <a href="https://your-portfolio-link.com/#racing-game" class="btn-link">觀看遊戲技術展示影音資料 ➔</a>
+                </div>
+            </div>
+
+            <!-- 作品 3 -->
+            <div class="portfolio-item">
+                <div class="portfolio-images">
+                    <div class="image-placeholder">[參數化小木屋渲染]</div>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">4. 3D 列印客製建築 (參數化生成系統)</h3>
+                    <div class="tech-stack-mini">
+                        <span>文法生成 (Grammar-based)</span> <span>演算法</span> <span>3D 列印</span>
+                    </div>
+                    <div class="portfolio-desc">
+                        透過網頁多平台讓使用者編輯風格化的小木屋模型，利用「文法定義（Grammar-based）」動態變更建築模型體積與細節（如粗細、位置等參數）。<br /><br />
+                        <strong>相依性與卡榫運算：</strong> 參數調整時會自動矯正建築架構保持自然，並能自動判斷零件接合面的大小與方向，運算切分 3D 列印所需之實體卡榫以便重新組裝。
+                    </div>
+                    <a href="https://your-portfolio-link.com/#procedural-generation" class="btn-link">觀看程式化生成系統展示 ➔</a>
+                </div>
+            </div>
+
+            <!-- 作品 4 -->
+            <div class="portfolio-item">
+                <div class="portfolio-images">
+                    <div class="image-placeholder">[卡比模型網格切割]</div>
+                    <div class="image-placeholder">[Shader渲染特寫]</div>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">5. 底層圖學與 Shader 實作 (卡比模型系列)</h3>
+                    <div class="tech-stack-mini">
+                        <span>OpenGL</span> <span>Shader / GLSL</span> <span>Raycast</span> <span>UV Mapping</span>
+                    </div>
+                    <div class="portfolio-desc">
+                        深度探討 3D 渲染管線（Rendering Pipeline）的大學實作專案。利用 Raycast 演算法實作對 3D
+                        模型的三角面進行局部選取，並純手工運算幾何變形，將曲面轉換為正方形以進行精確的 UV 座標貼圖轉換。<br /><br />
+                        <strong>客製化著色器：</strong> 親自撰寫 Shader 取代傳統固定管線，精確掌握光照演算，讓模型呈現出極具質感的卡通化 (Toon Shading) 與金屬化渲染效果。
+                    </div>
+                    <a href="https://your-portfolio-link.com/#opengl-shader" class="btn-link">觀看底層渲染技術展示 ➔</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 24px; color: var(--text-light); font-size: 13px;">
+                <p>欲查看更多專案細節、程式源碼與動態影像展示，<br />請移步至我的個人線上作品集網站或 GitHub。</p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
