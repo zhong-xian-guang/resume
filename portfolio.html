@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鍾賢廣 | 互動作品集</title>
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <!-- 背景動態光暈元素 -->
+    <div class="bg-glow circle-1"></div>
+    <div class="bg-glow circle-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-name">鍾賢廣</span>
+                <span class="logo-title">Portfolio Hub</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-btn-outline">📄 返回履歷 (Resume)</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1 class="glitch" data-text="Featured Projects">Featured Projects</h1>
+            <p>探索過去在 3D 圖學建構、全端整合系統與互動介面領域的技術軌跡。</p>
+        </header>
+
+        <!-- 專案網格 -->
+        <div class="project-grid">
+
+            <!-- Card 1 -->
+            <div class="project-card" data-modal="modal-ccs">
+                <div class="card-image-wrapper">
+                    <div class="image-placeholder main-placeholder" data-label="[預留圖片：CCS軟體操作畫面 / 大山大水地形渲染]"></div>
+                    <!-- 未來可換成 <img src="images/ccs_model.jpg" alt="3D 地景"> -->
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>C/C++</span><span>C#</span><span>3D 碰撞演算</span>
+                    </div>
+                    <h3 class="card-title">3D 地景建模系統與 CAD 引擎開發</h3>
+                    <p class="card-desc">打通 2D CAD 與 3D 的技術橋樑。負責研發佔地碰撞、地形貼合、破除 7GB 巨大模型記憶體洩漏與 Undo/Redo 狀態機的核心優化。</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="project-card" data-modal="modal-carbon">
+                <div class="card-image-wrapper">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #1e3a8a, #065f46);" data-label="[預留圖片：自動化碳排預算表/Excel生成畫面]"></div>
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>Python</span><span>Libxlsxwriter</span><span>資料庫工程</span>
+                    </div>
+                    <h3 class="card-title">工程碳排與即時估價自動化系統</h3>
+                    <p class="card-desc">因應公部門規範，實現從畫布物件直接映射碳排估價。自動產製完全符合規範且帶有動態公式之 XLSX 表單模組。</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="project-card" data-modal="modal-vr">
+                <div class="card-image-wrapper">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #4c1d95, #be185d);" data-label="[預留圖片：VR 曲面蛋形硬體 / 類神經分析圖]"></div>
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>VR/MR</span><span>Machine Learning</span><span>硬體設計</span>
+                    </div>
+                    <h3 class="card-title">VR 磁力定位系統與曲面繪圖</h3>
+                    <p class="card-desc">碩士論文發表：結合霍爾效應感測器與類神經網路演算法，大幅減少雜訊干擾，實現在 3D 曲面達到 1mm 誤差內的極致實體繪畫手感。</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="project-card" data-modal="modal-racing">
+                <div class="card-image-wrapper">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #1f2937, #dc2626);" data-label="[預留圖片：賽車物理引擎畫面]"></div>
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>Unity</span><span>遊戲物理引擎</span><span>C#</span>
+                    </div>
+                    <h3 class="card-title">IGS 賽車遊戲引擎與重播系統</h3>
+                    <p class="card-desc">開發機車底層之 Magic Formula 摩擦力與懸吊反饋引擎；並設計出僅需儲存極少量 Event Frame 即可 100% 重現實況的 Ghost Car 重播架構。</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="project-card" data-modal="modal-procedural">
+                <div class="card-image-wrapper">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #0f766e, #4338ca);" data-label="[預留圖片：參數化小木屋 / 3D列印物件]"></div>
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>Procedural Generation</span><span>演算法</span>
+                    </div>
+                    <h3 class="card-title">程式化生成: ZomeTool與木屋系統</h3>
+                    <p class="card-desc">運用文法定義（Grammar-based）動態控制建築參數與相依性；開發空間遞迴演算法產出適用於光固化列印的堅固內部骨架。</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="project-card" data-modal="modal-fullstack">
+                <div class="card-image-wrapper">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #111827, #374151);" data-label="[預留圖片：正反辯論網站/OJ系統畫面]"></div>
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>Web 全端開發</span><span>AST 語意分析</span>
+                    </div>
+                    <h3 class="card-title">全端平台開發 (NPWeb & OJ)</h3>
+                    <p class="card-desc">包含：一手包辦打造正反論證平台的會員邏輯；參與修改 HustOJ 系統使其突破核心，支援多檔 C++ 複雜編譯與 AST 防呆分析。</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modals (彈出視窗區域) -->
+
+    <!-- Modal: CCS -->
+    <div class="modal-backdrop" id="modal-ccs">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>3D 地景建模系統與 CAD 引擎開發</h2>
+                <div class="modal-tags">
+                    <span>C/C++</span><span>C#</span><span>3D 演算法</span><span>LISP</span><span>效能調校</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <div class="image-placeholder modal-image" data-label="[預留位置：詳細截圖 1]"></div>
+                        <div class="image-placeholder modal-image" style="height: 150px; margin-top:10px" data-label="[預留位置：詳細截圖 2]"></div>
+                    </div>
+                    <div class="modal-right">
+                        <h3>專案概述</h3>
+                        <p>這是於 2023-2026 年最核心的商業軟體開發專案，旨在打通「傳統 2D CAD 設計」與「3D 模型實景渲染」之間的技術屏障。</p>
+                        <h3>🏆 核心技術貢獻</h3>
+                        <ul>
+                            <li><strong>3D 縱橫斷面與幾何演算法：</strong> 開發物件的浮空/貼地計算邏輯，並使用 AABB/Raycast 處理極度複雜的空間「占地衝突」與動態邊界校正。</li>
+                            <li><strong>記憶體洩漏 (Memory Leak) 突破：</strong> 重構底層 Undo/Redo 狀態機，成功駕馭高達 7GB 的巨波段地形載入，將處理時間壓縮至可用範圍。</li>
+                            <li><strong>第一線 UX 調研：</strong> 多次前往企業實勘，調整設計步驟、實作「複製性質工具」防呆對齊邏輯，並至全國主講 15 場以上高強度教育訓練。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Carbon/Excel -->
+    <div class="modal-backdrop" id="modal-carbon">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>工程碳排與即時估價自動化系統</h2>
+                <div class="modal-tags">
+                    <span>Python</span><span>Libxlsxwriter</span><span>專案管理整合</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <div class="image-placeholder modal-image" data-label="[預留位置：輸出的 Excel 表格畫面]"></div>
+                    </div>
+                    <div class="modal-right">
+                        <h3>專案概述</h3>
+                        <p>為了解決公部門出表規範（水保署/水利署）極度耗時的人工作業，主導開發的動態算表引擎。</p>
+                        <h3>🏆 核心技術貢獻</h3>
+                        <ul>
+                            <li><strong>碳排估算邏輯：</strong> 導入政府係數指引與物價指數，架構出一套將「虛擬畫布面積、長度、數量」對齊法定預算單元的自動比對模組。</li>
+                            <li><strong>Excel 腳本生態系：</strong> 透過 Python 高度客製化 XLSX 的生成與樣式編排，報表內將直接生成帶有關聯公式的活頁簿，無縫接軌工程界的採購習慣。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: VR -->
+    <div class="modal-backdrop" id="modal-vr">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>VR 磁力空間定位與曲面繪圖系統</h2>
+                <div class="modal-tags">
+                    <span>VR / AR</span><span>Machine Learning</span><span>Hardware Sensing</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <div class="image-placeholder modal-image" data-label="[預留位置：機器手臂軌跡或硬體接線圖]"></div>
+                    </div>
+                    <div class="modal-right">
+                        <h3>專案概述</h3>
+                        <p>為碩士階段深度研究的硬體與圖學跨界題目，探討解決虛擬實境操作中缺乏實體反饋的致命傷。</p>
+                        <h3>🏆 核心技術貢獻</h3>
+                        <ul>
+                            <li><strong>硬體感測陣列：</strong> 在蛋形曲面等極小空間背後自製多工器與霍爾效應感測器陣列。</li>
+                            <li><strong>類神經網路校正：</strong> 蒐集百萬筆 Ground Truth 訓練模型，解決間距帶來的干擾問題，將感測器數量需求巨量縮減至 25% 以下。</li>
+                            <li><strong>平滑 1mm 體驗：</strong> 利用法向量計算進階優化，讓混合實境畫布系統真正具備「畫筆碰到實體」的流暢與穩定感。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Racing -->
+    <div class="modal-backdrop" id="modal-racing">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>IGS 賽車遊戲引擎與重播系統</h2>
+                <div class="modal-tags">
+                    <span>Unity</span><span>遊戲物理引擎</span><span>C#</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <div class="image-placeholder modal-image" data-label="[預留位置：賽道截圖]"></div>
+                    </div>
+                    <div class="modal-right">
+                        <h3>專案概述</h3>
+                        <p>為商用街機開發核心賽道控制邏輯與逼真的車輛物理底層引擎。</p>
+                        <h3>🏆 核心技術貢獻</h3>
+                        <ul>
+                            <li><strong>物理引擎：</strong> 實作 Magic Formula 摩擦力模型，完美模擬賽車起步、過彎、懸吊反饋與引擎扭矩動態。</li>
+                            <li><strong>鬼車重播系統 (Ghost Car)：</strong> 開發出一套僅紀錄極少關鍵 Event Frame，便能 100% 完美還原整場激烈賽道機車動態軌跡的重播機制。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Procedural -->
+    <div class="modal-backdrop" id="modal-procedural">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>程式化生成: ZomeTool與木屋系統</h2>
+                <div class="modal-tags">
+                    <span>Procedural Generation</span><span>演算法</span><span>3D列印</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <div class="image-placeholder modal-image" data-label="[預留位置：生成過程圖]"></div>
+                    </div>
+                    <div class="modal-right">
+                        <h3>專案概述</h3>
+                        <p>探索由程式與文法驅動的建築與骨架模型生成系統。</p>
+                        <h3>🏆 核心技術貢獻</h3>
+                        <ul>
+                            <li><strong>ZomeTool 遞迴結構：</strong> 開發演算法，在骨架內部疊加生成 Zometool 玩具結構，作為 3D 列印的大型支撐。</li>
+                            <li><strong>文法控制 (Grammar-based)：</strong> 開發動態參數修飾模型生成細節，並負責處理零件接合面的切割與卡榫運算，使列印品能完美組裝。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Fullstack -->
+    <div class="modal-backdrop" id="modal-fullstack">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>全端平台開發 (NPWeb & OJ)</h2>
+                <div class="modal-tags">
+                    <span>Web 全端開發</span><span>AST 語意分析</span><span>資料庫工程</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <div class="image-placeholder modal-image" data-label="[預留位置：網站後台介面]"></div>
+                    </div>
+                    <div class="modal-right">
+                        <h3>專案概述</h3>
+                        <p>跨足網頁全端工程的實作，統包伺服器、資料庫結構與前端驗證。</p>
+                        <h3>🏆 核心技術貢獻</h3>
+                        <ul>
+                            <li><strong>正反論證網頁 (NPWeb)：</strong> 開發具備權限分級、檢舉、投票追蹤的雙向表格論點系統。修復了諸多資料庫與滾動條的 Bug。</li>
+                            <li><strong>Online Judge 平台改版：</strong> 擴充 HustOJ 核心機制使其支援多檔編譯。並加入語意分析 (AST) 功能，自動判斷學生提交的原始碼是否符合特定特徵防呆要求。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="portfolio.js"></script>
+</body>
+</html>
