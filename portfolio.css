@@ -341,20 +341,36 @@ body {
 .modal-split {
     display: flex;
     gap: 40px;
+    align-items: flex-start;
 }
 
 .modal-left {
     flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 12px;
 }
+
+/* 美化 modal-left 內的捲軸 */
+.modal-left::-webkit-scrollbar { width: 6px; }
+.modal-left::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+.modal-left::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
 
 .modal-right {
     flex: 1;
 }
 
 .modal-image {
-    height: 220px;
+    width: 100%;
+    height: auto;
+    max-height: 350px;
     border-radius: 8px;
     border: 1px solid var(--card-border);
+    object-fit: contain;
+    background: rgba(0,0,0,0.2);
 }
 
 .modal-right h3 {
