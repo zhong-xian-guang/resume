@@ -211,9 +211,12 @@
     <!-- 第一頁：履歷 (Resume) -->
     <div class="page">
         <header>
-            <div class="header-left">
-                <h1>鍾賢廣</h1>
-                <h2>全端工程師 / 3D 工具開發者</h2>
+            <div class="header-left" style="display: flex; align-items: center; gap: 16px;">
+                <img src="圖資/個人照/PXL_20250607_073509324.MP.jpg" alt="鍾賢廣 個人照" style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color);">
+                <div>
+                    <h1>鍾賢廣</h1>
+                    <h2>全端工程師 / 3D 工具開發者</h2>
+                </div>
             </div>
             <div class="header-right"
                 style="display: flex; align-items: center; gap: 12px; text-align: right; justify-content: flex-end;">
@@ -248,7 +251,8 @@
                     <div class="exp-title">儷寶科技</div>
                 </div>
                 <ul class="exp-bullets">
-                    <li><span class="highlight">資深軟體工程師</span> (2020.06-2026.03)</li>
+                    <li><span class="highlight">資深軟體工程師</span> (2020.06-2026.03)<br>
+                        主導 3D 地景建模系統 (CCS) 核心架構、空間演算法與動態計價引擎之開發。</li>
                 </ul>
                 <div class="exp-header">
                     <div class="exp-title">國立臺灣科技大學 (NTUST)</div>
@@ -282,8 +286,9 @@
                         狀態機與解決 Memory Leak，成功駕馭高達 7GB 的巨量模型。</li>
                     <li><span class="highlight">產線管理與輕量化瀏覽版本開發：</span>
                         為系統額外開發可解析原生輸出檔案的專用「瀏覽版」展示工具，不僅完善了內部產線工作坊流程，更成為設計師向外部推廣 3D 地景案件的關鍵利器。</li>
-                    <li><span class="highlight">產品調研 (UX) 與外部推廣：</span>
-                        擔任技術與第一線設計師間的溝通核心，實地探訪企業進行繪圖痛點訪談並轉譯為軟體新功能；主辦大型技術研討會與親自撰寫教材，於全國主講 15 場以上高強度實務教育訓練。</li>
+                    <li><span class="highlight">產線落地與政府合作推廣：</span>
+                        在長達近 6 年的開發期間，持續作為核心人物對接第一線工程設計師，推動系統迭代並在多個真實工程案件中成功落地執行。此外，更與政府機關合作推廣 3D 實景設計觀念，主辦大型技術研討會並於全國主講
+                        15 場以上高強度實務教育訓練。</li>
                 </ul>
             </div>
 
@@ -313,7 +318,8 @@
                     <li>解決了傳統 VR 繪畫無實體觸覺反饋與光學定位易受遮擋的極限痛點。</li>
                     <li><span class="highlight">硬體發明與整合：</span> 於 3D 列印模型（整顆蛋形曲面等）背面自定義霍爾效應感測器陣列與多工器接線，研發極小空間配置排線接法，結合
                         Arduino 將即時磁場資料回傳。</li>
-
+                    <li><span class="highlight">機器學習定位降本增效：</span> 蒐集海量實體量測資料作為 Ground Truth 匯入 ML
+                        演算法訓練模型，成功在大幅降低感測器數量（321降至87顆）的極限硬體條件下，將空間定位平均誤差從 3mm 壓縮至 1.2mm 的高精準度。</li>
                 </ul>
             </div>
 
@@ -330,6 +336,7 @@
                 </ul>
             </div>
 
+            <!-- 暫時隱藏較早期經歷
             <div class="experience-item">
                 <div class="exp-header">
                     <div class="exp-title">線上程式批改系統 (Online Judge) 二次開發</div>
@@ -352,6 +359,8 @@
                             等技術專書之編撰。</li>
                     </ul>
                 </div>
+            </div>
+            -->
 
         </section>
     </div>
