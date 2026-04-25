@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhong Xian-Guang | Interactive Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+    <!-- Background glow elements -->
+    <div class="bg-glow circle-1"></div>
+    <div class="bg-glow circle-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-name">ZHONG, XIAN-GUANG</span>
+                <span class="logo-en">鍾賢廣</span>
+                <span class="logo-title">Portfolio Hub</span>
+            </div>
+            <div class="nav-links">
+                <a href="index_en.html" class="nav-btn-outline">📄 Back to Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1 class="glitch" data-text="Portfolio">Portfolio</h1>
+            <p>Explore the technical journey across 3D graphics development, full-stack integrated systems, and interactive interfaces.</p>
+        </header>
+
+        <!-- Project Grid -->
+        <div class="project-grid">
+
+            <!-- Card 1 -->
+            <div class="project-card" data-modal="modal-landscape">
+                <div class="card-image-wrapper">
+                    <img src="圖資/地景案件/設計街景.jpg" alt="3D Landscape Project">
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>3D Software Dev</span><span>Geometry Algorithms</span><span>Performance Tuning</span>
+                    </div>
+                    <h3 class="card-title">1. Landscape Project (3D Landscape Modeling & CAD Engine)</h3>
+                    <p class="card-desc">A 3D landscape tool that enables engineering designers to plan roads and scenes directly within a 3D real-world model, eliminating the pain points of 2D tools that cannot accurately anticipate or handle complex terrain and elevation changes.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="project-card" data-modal="modal-vr-hall">
+                <div class="card-image-wrapper">
+                    <img src="圖資/霍爾感應器定位/image1.png" alt="Hall Effect Sensor Positioning">
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>VR/MR</span><span>Machine Learning</span><span>Hardware Integration</span>
+                    </div>
+                    <h3 class="card-title">2. Hall Effect Magnetic Positioning for Mixed Reality Drawing</h3>
+                    <p class="card-desc">Core research aimed at solving the "occlusion dead-zone failure" problem in traditional optical tracking VR, replacing it with magnetic sensing technology to achieve mixed-reality drawing with no line-of-sight constraints.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="project-card" data-modal="modal-3dprint">
+                <div class="card-image-wrapper">
+                    <img src="圖資/3D列印專案/image5.png" alt="Value Creation Plan 3D Printing Project">
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>3D Printing</span><span>SLA Resin</span><span>Algorithms</span>
+                    </div>
+                    <h3 class="card-title">3. Value Creation Plan — 3D Printing Project</h3>
+                    <p class="card-desc">A project exploring innovative software and hardware applications of 3D printing, covering SLA printer R&D, hardware-software communication, and a highly parametric model design system with automated structural decomposition.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="project-card" data-modal="modal-racing">
+                <div class="card-image-wrapper">
+                    <img src="圖資/賽車/Zhong-Xian-Guang_12_28_Zhong-Xian-Guang2017_12_28_image2.PNG" alt="Racing Game Development">
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>Unity/C#</span><span>Shader Rendering</span><span>Industry-Academia</span>
+                    </div>
+                    <h3 class="card-title">4. IGS Racing Game Industry-Academia Project</h3>
+                    <p class="card-desc">Industry-academia R&D collaboration with IGS (International Games System), developing core track mechanics and researching low-level graphics lighting and rendering.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="project-card" data-modal="modal-npweb">
+                <div class="card-image-wrapper">
+                    <img src="圖資/正反網頁/Zhong-Xian-Guang_11_01_正反網頁_測試事項_image75.png" alt="Pro-Con Web Platform">
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>Ruby</span><span>JavaScript</span><span>Full-Stack Web</span>
+                    </div>
+                    <h3 class="card-title">5. Pro-Con Web (Social Editorial Platform)</h3>
+                    <p class="card-desc">A full-stack web project designed to create an online editorial platform for people passionate about social issues to debate and engage in structured argumentation.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="project-card" data-modal="modal-oj">
+                <div class="card-image-wrapper">
+                    <img src="圖資/OJ/image6.png" alt="OJ System Architecture">
+                </div>
+                <div class="card-content">
+                    <div class="tech-tags">
+                        <span>Project Management</span><span>IDE Integration</span><span>AST Analysis</span>
+                    </div>
+                    <h3 class="card-title">6. Online Judge (OJ) — Automated Code Grading System</h3>
+                    <p class="card-desc">A large-scale teaching-assistance project led and supervised from end to end. Core goal: upgrade and extend a traditional open-source OJ system to address the educational pain points of modern object-oriented and multi-file project structures.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modals -->
+
+    <!-- Modal 1 -->
+    <div class="modal-backdrop" id="modal-landscape">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>1. Landscape Project (3D Landscape Modeling & CAD Engine)</h2>
+                <div class="modal-tags">
+                    <span>C/C++</span><span>C#</span><span>3D Geometry Algorithms</span><span>Commercial Software Dev</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <img class="modal-image" src="圖資/地景案件/設計街景.jpg" alt="Designed Streetscape">
+                        <img class="modal-image" src="圖資/地景案件/CAD工具.gif" alt="CAD Tool">
+                        <img class="modal-image" src="圖資/地景案件/斷面設計2.gif" alt="Cross-Section Design 2">
+                        <img class="modal-image" src="圖資/地景案件/斷面設計.gif" alt="Cross-Section Design">
+                        <img class="modal-image" src="圖資/地景案件/場景素材分析.png" alt="Scene Material Analysis">
+                        <img class="modal-image" src="圖資/地景案件/素材擺放2.gif" alt="Material Placement 2">
+                        <img class="modal-image" src="圖資/地景案件/素材庫管理.png" alt="Asset Library Management">
+                    </div>
+                    <div class="modal-right">
+                        <h3>Project Overview</h3>
+                        <p>A 3D landscape tool that enables engineering designers to plan roads and scenes directly within a 3D real-world model, eliminating the pain points of 2D tools that cannot accurately anticipate or handle complex terrain and elevation changes.</p>
+                        <h3>🏆 Core Technical Contributions</h3>
+                        <ul>
+                            <li><strong>Parametric Assets & Smart Placement:</strong> Developed asset design and environmental placement tools enabling objects to be precisely overlaid onto geometric constructs (points, lines, surfaces) in real-world scenes. Independently designed the underlying data structure, file I/O, and local database import/export for the entire system.</li>
+                            <li><strong>Scene Analysis & Cross-Section Design:</strong> Completed dynamic cross-section design and horizontal/vertical profile output tools; implemented scene parameter analysis, automatic table aggregation output, and seamless integration with the backend asset data system.</li>
+                            <li><strong>Auxiliary Tools & Viewer Product Line:</strong> Led maintenance of the Viewer product line. Spearheaded development including a CAD plugin and a WebRTC-based external collaboration tool for screen sharing and remote assistance.</li>
+                            <li><strong>6 Years of Production Deployment & Promotion:</strong> Continuously liaised with front-line engineering designers throughout nearly 6 years of development, driving system deployment across multiple real-world projects. Represented the company in government collaborations to promote 3D scenic design, delivering 15+ practical promotion seminars.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal-backdrop" id="modal-vr-hall">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>2. Hall Effect Magnetic Positioning for Mixed Reality Drawing</h2>
+                <div class="modal-tags">
+                    <span>Master's Thesis</span><span>VR/MR</span><span>Machine Learning</span><span>Sensor Hardware</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <img class="modal-image" src="圖資/霍爾感應器定位/image1.png" alt="">
+                        <img class="modal-image" src="圖資/霍爾感應器定位/image80.png" alt="">
+                        <img class="modal-image" src="圖資/霍爾感應器定位/image5.png" alt="">
+                        <img class="modal-image" src="圖資/霍爾感應器定位/image3.jpg" alt="">
+                        <img class="modal-image" src="圖資/霍爾感應器定位/image1 (2).png" alt="">
+                        <img class="modal-image" src="圖資/霍爾感應器定位/image3 (2).jpg" alt="">
+                    </div>
+                    <div class="modal-right">
+                        <h3>Project Overview</h3>
+                        <p>Core research aimed at solving the "occlusion dead-zone failure" problem in traditional optical tracking VR when drawing on physical objects, replacing it with magnetic sensing technology to achieve mixed-reality drawing with no line-of-sight constraints.</p>
+                        <h3>🏆 Core Technical Contributions</h3>
+                        <ul>
+                            <li><strong>Custom Hardware Array:</strong> Manually cut 3D-printed models and hand-soldered signal multiplexers and large arrays of Hall effect sensors across curved surfaces.</li>
+                            <li><strong>ML-Driven Cost Reduction & Accuracy:</strong> Collected millions of robotic arm Ground Truth data points to train an ML model, successfully compressing average error from 3mm to an impressive 1.2mm — using only 87 sensors instead of the original 321!</li>
+                            <li><strong>Smooth 1mm-Accuracy Experience:</strong> Applied normal vector computation for smoothing, delivering a near-zero-latency feel. Experimental data confirms the system enables humans to achieve fine model coloring that pure optical VR cannot.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal-backdrop" id="modal-3dprint">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>3. Value Creation Plan — 3D Printing Project</h2>
+                <div class="modal-tags">
+                    <span>3D Printing</span><span>SLA Resin</span><span>Model Algorithms</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <img class="modal-image" src="圖資/3D列印專案/image5.png" alt="">
+                        <img class="modal-image" src="圖資/3D列印專案/image2.png" alt="">
+                        <img class="modal-image" src="圖資/3D列印專案/image3.png" alt="">
+                        <img class="modal-image"
+                            src="圖資/3D列印專案/Zhong-Xian-Guang_10_11_Zhong-Xian-Guang2016_10_11_image2.JPG" alt="">
+                        <img class="modal-image"
+                            src="圖資/3D列印專案/Zhong-Xian-Guang_11_08_Zhong-Xian-Guang2016_11_08_image6.jpg" alt="">
+                    </div>
+                    <div class="modal-right">
+                        <h3>Project Overview</h3>
+                        <p>A project exploring innovative software and hardware applications of 3D printing, covering SLA printer R&D, hardware-software communication, and a highly parametric model design system with automated structural decomposition for print-ready models.</p>
+                        <h3>🏆 Core Technical Contributions</h3>
+                        <ul>
+                            <li><strong>Hardware-Software Integration & Print Control:</strong> Participated in developing the software system for an SLA 3D printer. Used Bluetooth communication to remotely control printer hardware and slice layers, and implemented a cross-platform model printing App management tool.</li>
+                            <li><strong>Parametric Architectural Model Generation:</strong> Developed a parametric generation engine for miniature architecture (dollhouses), allowing flexible and precise control over interior partition counts, room sizes, and geometry details down to windows, doors, and roofs via parameter inputs.</li>
+                            <li><strong>Large Object Smart Segmentation & Interlocking Joint Algorithm:</strong> To overcome the machine volume limitation for large wall objects, developed a 3D spatial slicing algorithm that automatically segments large structures and precisely computes and generates 3D interlocking joints on cut surfaces, allowing pieces to be printed by small machines and perfectly assembled.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal-backdrop" id="modal-racing">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>4. IGS Racing Game Industry-Academia Project</h2>
+                <div class="modal-tags">
+                    <span>Unity</span><span>Shader Development</span><span>C#</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <img class="modal-image"
+                            src="圖資/賽車/Zhong-Xian-Guang_12_28_Zhong-Xian-Guang2017_12_28_image2.PNG" alt="">
+                        <img class="modal-image" src="圖資/賽車/Zhong-Xian-Guang_09_28_3DGameFinal_image12.png" alt="">
+                        <img class="modal-image" src="圖資/賽車/Zhong-Xian-Guang_09_28_FinalReport_image54.png" alt="">
+                        <img class="modal-image" src="圖資/賽車/Zhong-Xian-Guang_09_28_FinalReport_image75.png" alt="">
+                        <img class="modal-image" src="圖資/賽車/Zhong-Xian-Guang_05_18_FinalReport50_image55.png" alt="">
+                    </div>
+                    <div class="modal-right">
+                        <h3>Project Overview</h3>
+                        <p>Industry-academia R&D collaboration with IGS (International Games System), developing core track mechanics and researching low-level graphics lighting and rendering.</p>
+                        <h3>🏆 Core Technical Contributions</h3>
+                        <ul>
+                            <li><strong>Track & Traffic Vehicle Generation System:</strong> Built a terrain editor using quadratic Bézier curves that directly outputs dynamic collision meshes and patrol paths. Also implemented traffic vehicle event triggers and a dynamic spawning system.</li>
+                            <li><strong>Lighting & Shader Research:</strong> Conducted low-level research and implementation of lighting shader rendering programs for racing environments and vehicle materials.</li>
+                            <li><strong>Ghost Car Replay System:</strong> Developed a replay architecture that records only a minimal set of key Event Frames and can 100% perfectly reconstruct all dynamic movements and trajectories of an entire race.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal-backdrop" id="modal-npweb">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>5. Pro-Con Web (Social Editorial Platform)</h2>
+                <div class="modal-tags">
+                    <span>Full-Stack Web Dev</span><span>Ruby</span><span>Database Engineering</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <img class="modal-image" src="圖資/正反網頁/Zhong-Xian-Guang_11_01_正反網頁_測試事項_image41.png" alt="">
+                        <img class="modal-image" src="圖資/正反網頁/Zhong-Xian-Guang_11_01_正反網頁_測試事項_image75.png" alt="">
+                    </div>
+                    <div class="modal-right">
+                        <h3>Project Overview</h3>
+                        <p>A full-stack web project designed to create an online editorial platform for people passionate about social issues to engage in structured pro-and-con argumentation.</p>
+                        <h3>🏆 Core Technical Contributions</h3>
+                        <ul>
+                            <li><strong>Full-Stack Architecture:</strong> Used Ruby as the backend framework handling all request routing, with JavaScript as the dynamic rendering foundation on the frontend.</li>
+                            <li><strong>Core Forum Logic:</strong> Solely implemented the complex member relationship logic, permission tiers, reporting system, email integration, and bidirectional vote tracking system within the pro-con argumentation platform.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal-backdrop" id="modal-oj">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2>6. Online Judge (OJ) — Automated Code Grading System</h2>
+                <div class="modal-tags">
+                    <span>Project Management</span><span>VS Plugin Extension</span><span>AST Semantic Analysis</span>
+                </div>
+                <div class="modal-split">
+                    <div class="modal-left">
+                        <img class="modal-image" src="圖資/OJ/image6.png" alt="OJ Architecture Diagram">
+                        <img class="modal-image" src="圖資/OJ/image3.png" alt="OJ Architecture Diagram">
+                    </div>
+                    <div class="modal-right">
+                        <h3>Project Overview</h3>
+                        <p>A large-scale teaching-assistance project led and supervised from end to end. Core goal: upgrade and extend a traditional open-source OJ system to address the educational pain points of modern object-oriented and multi-file project structures.</p>
+                        <h3>Core System Evolution</h3>
+                        <ul>
+                            <li><strong>Multi-File Compilation & Storage Architecture:</strong> Broke through the traditional OJ single-file submission limitation by extending the compiler pipeline and database to support large project submissions containing multiple scripts, enabling true modular testing.</li>
+                            <li><strong>Visual Studio IDE Deep Integration:</strong> Guided development of a dedicated VS extension, allowing examinees to log in, load assignment projects, submit in stages, and receive real-time compilation feedback — all within a single IDE window.</li>
+                            <li><strong>AST Syntax Feature Analysis:</strong> To counter students "hardcoding" output to game the grader, integrated static text analysis (AST) to precisely verify whether submitted code actually implements the required classes and functions mandated by each problem.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="portfolio.js"></script>
+</body>
+
+</html>

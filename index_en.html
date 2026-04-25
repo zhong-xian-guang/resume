@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhong Xian-Guang - Resume & Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-main: #1f2937;
+            --text-light: #4b5563;
+            --bg-color: #ffffff;
+            --bg-gray: #f3f4f6;
+            --border-color: #e5e7eb;
+            --accent: #3b82f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            color: var(--text-main);
+            background-color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 10mm auto;
+            background: var(--bg-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-left h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .header-left h2 {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .header-right a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin: 16px 0 8px 0;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: var(--accent);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        .summary {
+            font-size: 13px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .skill-badge {
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        .experience-item {
+            margin-bottom: 12px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .exp-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .exp-date {
+            font-size: 11px;
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            background: #e0e7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .exp-bullets {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 12px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .exp-bullets li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+
+        .exp-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        @media print {
+            body {
+                background-color: transparent;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <header>
+            <div class="header-left" style="display: flex; align-items: center; gap: 16px;">
+                <img src="圖資/個人照/PXL_20250607_073509324.MP.jpg" alt="Zhong Xian-Guang Profile Photo"
+                    style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color);">
+                <div>
+                    <h1 style="margin-bottom: 4px;">ZHONG, XIAN-GUANG</h1>
+                    <div
+                        style="font-size: 16px; font-weight: 500; color: #555; letter-spacing: 1px; margin-bottom: 8px;">
+                        鍾賢廣</div>
+                    <h2>Full-Stack Engineer / 3D Tool Developer</h2>
+                </div>
+            </div>
+            <div class="header-right"
+                style="display: flex; align-items: center; gap: 12px; text-align: right; justify-content: flex-end;">
+                <div>
+                    <p>Email: ea5878158@gmail.com</p>
+                    <p><a href="portfolio_en.html" target="_blank">🔗 Online Portfolio Website</a></p>
+                </div>
+                <img src="qr_portfolio.png" alt="Portfolio QR Code"
+                    style="width: 96px; border: 1px solid var(--border-color); border-radius: 4px; padding: 2px;">
+            </div>
+        </header>
+
+        <section>
+            <h3 class="section-title">Core Skills</h3>
+            <div class="skills-container">
+                <span class="skill-badge">C / C++</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Full-Stack Tool Development</span>
+                <span class="skill-badge">3D Graphics Technology (Image Processing, Curve Calculation, Shader, Raycast)</span>
+                <span class="skill-badge">Unity / Physics-Based Game Engine Development</span>
+                <span class="skill-badge">Hardware Sensor Integration (Hall Effect Sensing, 3D Printing)</span>
+                <span class="skill-badge">English (TOEIC 870)</span>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Education & Experience</h3>
+            <div class="experience-item" style="margin-bottom: 12px;">
+                <div class="exp-header">
+                    <div class="exp-title">LY BOW TECHNOLOGY CO</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">Senior Software Engineer</span> (2020.06–2026.03)<br>
+                        Led development of the core architecture, spatial algorithms, and dynamic pricing engine for the 3D Landscape Modeling System (CCS).</li>
+                </ul>
+                <div class="exp-header">
+                    <div class="exp-title">National Taiwan University of Science and Technology (NTUST)</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">Dept. of Computer Science — Research & Teaching Assistant</span> (2012.09 — 2019.06)</li>
+                    <li><span class="highlight">M.S. in Computer Science</span> (2016.09 — 2019.06)</li>
+                    <li><span class="highlight">B.S. in Computer Science</span> (2012.09 — 2016.06)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Core Projects & Work Experience</h3>
+
+            <!-- LY BOW TECHNOLOGY CO — Growth Phase (2023–2026) -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">Senior Software Engineer | 3D Landscape Modeling System (CCS) & Pricing Engine</div>
+                    <div class="exp-date">LY BOW TECHNOLOGY CO | 2023.01 — 2026.03</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">Fully Automated "Interactive Cost Estimation" Architecture:</span> Replaced the legacy static analysis approach by architecting a brand-new dynamic pricing engine, enabling changes to scene analysis items (including foundational structures and specialized sub-item breakdowns) to instantly refresh engineering quotations. With deep support for PCCES-style specification table output and DXF legend quantity table integration.</li>
+                    <li><span class="highlight">Unit Cost Analysis with Carbon Emission Data & External System Integration:</span> Extended the real-time estimation architecture to integrate with Soil & Water Conservation Bureau standards, generating lifecycle carbon emission reports and automatically producing fully compliant XLSX financial report modules that consolidate complex project budget and carbon footprint data.</li>
+                    <li><span class="highlight">Frontend UI/UX Development & Low-Level Refactoring:</span> Built multiple interactive frontend tools within the Blender environment to significantly improve designers' workflows. Deeply refactored the Undo/Redo state machine and resolved memory leaks, successfully handling massive scene data of up to tens of gigabytes.</li>
+                    <li><span class="highlight">Pipeline Management & Lightweight Viewer Development:</span> Developed a dedicated "Viewer" display tool capable of parsing native output files, which streamlined the transition from project design to project review and became a key asset for designers to showcase 3D landscape projects to external stakeholders.</li>
+                    <li><span class="highlight">Production Deployment & Government Collaboration:</span> Served as a core liaison with front-line engineering designers throughout nearly 6 years of development, driving system iteration and successful deployment across multiple real-world engineering projects. Also collaborated with government agencies to promote 3D scenic design concepts, organizing large-scale technical symposiums and delivering 15+ practical promotion seminars nationwide.</li>
+                </ul>
+            </div>
+
+            <!-- LY BOW TECHNOLOGY CO — Founding Phase (2020–2022) -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">Software Engineer | 3D Spatial Layout Algorithms & Unit Cost Prototype</div>
+                    <div class="exp-date">LY BOW TECHNOLOGY CO | 2020.06 — 2022.12</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">Spatial Geometry Algorithms & Dynamic Placement:</span> Developed a 3D geometry continuous-placement tool for point/line engineering products. Overcame contour terrain boundary constraints, specific turn-angle and slope tolerances, and implemented interchangeable custom-spec algorithms with design-line-driven dynamic fitting calculation.</li>
+                    <li><span class="highlight">Unit Cost Analysis System:</span> Connected 3D viewport spatial data (area, custom product quantities) to construct detailed material, labor, machinery, and miscellaneous cost aggregation logic, and developed an automatic quantity analysis XML export module.</li>
+                    <li><span class="highlight">Large-Scale Instancing Extension:</span> Implemented instance rendering and entity reduction for vast quantities of design objects, significantly reducing rendering-induced latency, and implemented read/write validation guards for the project exchange format (Olb/JSON).</li>
+                </ul>
+            </div>
+
+            <!-- Master's Thesis Research -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">Magnetic Positioning System & Mixed Reality (VR) Drawing Application</div>
+                    <div class="exp-date">Master's Research | 2018.01 — 2019.09</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Addressed critical pain points of traditional VR drawing: absence of physical tactile feedback and the occlusion vulnerability of optical tracking systems.</li>
+                    <li><span class="highlight">Hardware Invention & Integration:</span> Configured Hall effect sensor arrays and multiplexer wiring on the back of 3D-printed models (including full egg-shaped curved surfaces), and integrated with Arduino for real-time magnetic field data transmission.</li>
+                    <li><span class="highlight">ML-Driven Cost Reduction & Accuracy Improvement:</span> Collected large-scale robotic arm Ground Truth measurements to train an ML model, successfully compressing average spatial positioning error from 3mm to 1.2mm while drastically reducing sensor count from 321 to just 87 units.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">IGS Racing Game System R&D</div>
+                    <div class="exp-date">Industry-Academia Project (IGS) | 2016.03 — 2019.01</div>
+                </div>
+                <ul class="exp-bullets">
+                    <li><span class="highlight">Track & Street Vehicle Generation:</span> Developed a path generation algorithm for procedural race track geometry, and built an automatic traffic vehicle placement and lane-following system for environmental streets.</li>
+                    <li><span class="highlight">Compact Replay System (Ghost Car):</span> Designed and implemented a "Ghost Car" replay architecture capable of perfectly reconstructing the entire race trajectory by recording only a minimal set of core Event Frames.</li>
+                </ul>
+            </div>
+
+        </section>
+    </div>
+
+</body>
+
+</html>
