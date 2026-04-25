@@ -202,11 +202,58 @@
             .page-break {
                 page-break-before: always;
             }
+
+            .lang-switcher {
+                display: none;
+            }
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 6px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            z-index: 100;
+            user-select: none;
+        }
+
+        .lang-active {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .lang-divider {
+            color: var(--border-color);
+        }
+
+        .lang-link {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .lang-link:hover {
+            color: var(--primary-color);
         }
     </style>
 </head>
 
 <body>
+
+    <div class="lang-switcher">
+        <span class="lang-active">中</span>
+        <span class="lang-divider">|</span>
+        <a href="index_en.html" class="lang-link">EN</a>
+    </div>
 
     <!-- 第一頁：履歷 (Resume) -->
     <div class="page">
